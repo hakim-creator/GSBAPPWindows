@@ -1,0 +1,10 @@
+Heritage_technicien = (Il faut au moins un sur-type );
+Heritage_Visiteur = (Il faut au moins un sur-type );
+Heritage_Responsable = (Il faut au moins un sur-type );
+technicien = (Id_technicien INT, formation VARCHAR(50), NivIntervention VARCHAR(50), competence VARCHAR(50));
+Materiel = (Id_Materiel INT, typeMateriel VARCHAR(50), dateAchat VARCHAR(50), garantie VARCHAR(50), fourni VARCHAR(50), louer VARCHAR(50));
+Visiteur = (Id_Visiteur INT);
+Salarie = (Id_Salarie INT, nom VARCHAR(50), Prenom VARCHAR(50), Matricule VARCHAR(50), dateAmb VARCHAR(50), Region VARCHAR(50), email VARCHAR(50), poste VARCHAR(50), identifiant VARCHAR(50), Mot_Passe VARCHAR(50));
+Responsable = (Id_Responsable INT);
+Probleme = (Id_Probleme INT, objet VARCHAR(50), nivUrgence VARCHAR(50), dateIncid DATETIME, zoneInter VARCHAR(50), etats VARCHAR(50), priseCharge VARCHAR(50), #Id_Salarie, #Id_technicien, #Id_Materiel);
+traitement = (Id_traitement INT, dateTrait VARCHAR(50), heureDebut VARCHAR(50), heureFin VARCHAR(50), travRealis VARCHAR(50), #Id_Probleme);
